@@ -1,45 +1,104 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Amigos do Bem - Início</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
-  <header>
-    <h1>Amigos do Bem</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html" lang="pt">Início</a></li>
-        <li><a href="projeto.html" lang="pt">Projetos</a></li>
-        <li><a href="cadastro.html" lang="pt">Cadastro / Voluntário</a></li>
-        <li><a href="contato.html" lang="pt">Contato</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="../IMG/logo.png" alt="Logo Amigos do Bem" class="logo" loading="lazy">
+        <h1>Amigos do Bem</h1>
+      </div>
+
+      <button class="nav-toggle" aria-label="Abrir menu">☰</button>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" lang="pt">Início</a></li>
+          <li class="has-submenu">
+            <a href="projeto.html" lang="pt">Projetos ▾</a>
+            <ul class="submenu">
+              <li><a href="projeto.html#educacao">Educação</a></li>
+              <li><a href="projeto.html#alimentos">Alimentos</a></li>
+              <li><a href="projeto.html#digital">Digital</a></li>
+              <li><a href="projeto.html#saude">Saúde</a></li>
+            </ul>
+          </li>
+          <li><a href="cadastro.html" lang="pt">Cadastro / Voluntário</a></li>
+          <li><a href="contato.html" lang="pt">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <img src="../IMG/logo.png" alt="Logo da ONG Amigos do Bem" width="200">
-      <h2>Transformando Solidariedade em Ação</h2>
-      <p>
-        A ONG <strong>Amigos do Bem</strong> atua em diversas comunidades, promovendo educação,
-        inclusão digital e combate à fome. Nosso propósito é criar oportunidades e mudar vidas
-        com gestos simples, mas cheios de impacto.
-      </p>
+  <main class="container" role="main">
+    <section class="hero" aria-label="Introdução e Destaque">
+      <div class="hero-info">
+        <h2>Bem-vindo(a) ao Amigos do Bem</h2>
+        <p>
+          Somos uma
+          <strong>organização da sociedade civil</strong> dedicada a combater a desigualdade social. Atuamos com projetos focados em
+          <strong>Educação</strong>,
+          <strong>Inclusão Digital</strong>,
+          <strong>Segurança Alimentar</strong> e
+          <strong>Saúde Comunitária</strong>,
+          garantindo oportunidades e dignidade a famílias em situação de vulnerabilidade.
+        </p>
+        <a href="cadastro.html" class="btn">Seja um Voluntário!</a>
+      </div>
 
-      <figure>
-        <img src="../IMG/ong_geral.png" alt="Voluntários da ONG Amigos do Bem reunidos" loading="lazy">
-        <figcaption>Voluntários trabalhando juntos por um futuro melhor.</figcaption>
-      </figure>
+      <div class="carousel" role="region" aria-label="Galeria de Destaques">
+        <div class="carousel-track">
+          <div class="carousel-item">
+            <img src="../IMG/voluntariado.png" alt="Voluntários em ação em uma comunidade" loading="lazy">
+          </div>
+          <div class="carousel-item">
+            <img src="../IMG/apoio_idosos.png" alt="Apoio a idosos" loading="lazy">
+          </div>
+          <div class="carousel-item">
+            <img src="../IMG/criancas.png" alt="Crianças sorrindo em atividade escolar" loading="lazy">
+          </div>
+        </div>
+        <button class="carousel-prev" aria-label="Anterior">‹</button>
+        <button class="carousel-next" aria-label="Próximo">›</button>
+      </div>
+    </section>
 
-      <a class="btn" href="projeto.html">Conheça nossos projetos</a>
+    <section class="highlights" aria-label="Destaques">
+      <div class="card highlight">
+        <h3>Educação</h3>
+        <p>Aulas e reforço para jovens e adultos. Nosso objetivo é melhorar o futuro por meio da aprendizagem.</p>
+      </div>
+      <div class="card highlight">
+        <h3>Alimentação</h3>
+        <p>Doações e distribuição de cestas básicas para famílias em vulnerabilidade, com acompanhamento local.</p>
+      </div>
+      <div class="card highlight">
+        <h3>Inclusão Digital</h3>
+        <p>Oficinas, acesso à internet e apoio técnico para quem não tem contato com tecnologia.</p>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Amigos do Bem | Projeto Escolar</p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <img src="../IMG/logo.png" alt="Logo" class="logo-sm" loading="lazy">
+        <p>Amigos do Bem — Projeto Escolar • © 2025</p>
+      </div>
+      <div class="footer-links">
+        <a href="contato.html">Contato</a>
+        <a href="projeto.html">Projetos</a>
+      </div>
+    </div>
   </footer>
+  <script src="../JS/script.js"></script> 
 </body>
 </html>
