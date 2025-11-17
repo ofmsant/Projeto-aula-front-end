@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
-  <header class="site-header">
+<header class="site-header" role="banner">
     <div class="container header-inner">
       <div class="brand">
         <img src="../IMG/logo.png" alt="Logo Amigos do Bem" class="logo" loading="lazy">
@@ -18,12 +18,20 @@
       </div>
 
       <button class="nav-toggle" aria-label="Abrir menu">☰</button>
+      <div class="accessibility-drawer" id="accessibilityDrawer">
+        <button id="drawerToggle" class="drawer-toggle">❯</button>
+
+        <div class="drawer-content">
+            <button id="toggle-dark" class="drawer-btn">🌙</button>
+            <button id="toggle-contrast" class="drawer-btn">🌓</button>
+        </div>
+      </div>
 
       <nav class="main-nav">
         <ul>
           <li><a href="index.html" lang="pt">Início</a></li>
           <li class="has-submenu">
-            <a href="projeto.html" lang="pt">Projetos ▾</a>
+            <a href="projeto.html" aria-haspopup="true" aria-expanded="false">Projetos ▾</a>
             <ul class="submenu">
               <li><a href="projeto.html#educacao">Educação</a></li>
               <li><a href="projeto.html#alimentos">Alimentos</a></li>

@@ -8,7 +8,16 @@
   <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
-  <header class="site-header">
+      <div class="accessibility-drawer" id="accessibilityDrawer">
+        <button id="drawerToggle" class="drawer-toggle">❯</button>
+
+        <div class="drawer-content">
+            <button id="toggle-dark" class="drawer-btn">🌙</button>
+            <button id="toggle-contrast" class="drawer-btn">🌓</button>
+        </div>
+      </div>
+
+<header class="site-header" role="banner">
     <div class="container header-inner">
       <div class="brand">
         <img src="../IMG/logo.png" alt="Logo Amigos do Bem" class="logo" loading="lazy">
@@ -19,7 +28,7 @@
         <ul>
           <li><a href="index.html" lang="pt">Início</a></li>
           <li class="has-submenu">
-            <a href="projeto.html" lang="pt">Projetos ▾</a>
+            <a href="projeto.html" aria-haspopup="true" aria-expanded="false">Projetos ▾</a>
             <ul class="submenu">
               <li><a href="projeto.html#educacao">Educação</a></li>
               <li><a href="projeto.html#alimentos">Alimentos</a></li>
@@ -35,74 +44,74 @@
   </header>
 
   <main class="container" role="main">
-<section class="projects container">
-  <h2>Conheça Nossas Iniciativas</h2>
-  <p>Veja como sua ajuda transforma a vida de milhares de pessoas.</p>
+    <section class="projects container">
+      <h2>Conheça Nossas Iniciativas</h2>
+      <p>Veja como sua ajuda transforma a vida de milhares de pessoas.</p>
 
-  <div class="grid-12">
+        <div class="grid-12">
 
-    <article class="project-card col-4" id="educacao">
-      <span class="badge badge-educacao">Educação</span>
-      <img src="../IMG/educacao.png" alt="Aula de alfabetização" loading="lazy">
-      <div class="card-body">
-        <h3>Educação para Todos</h3>
-        <p>Oferece aulas gratuitas de alfabetização e reforço escolar para jovens e adultos.</p>
-        <a class="btn-outline" href="contato.html" lang="pt">Saiba mais</a>
-      </div>
-    </article>
+          <article class="project-card col-4" id="educacao" role="article">
+            <span class="badge badge-educacao">Educação</span>
+            <img src="../IMG/educacao.png" alt="Aula de alfabetização" loading="lazy">
+            <div class="card-body">
+              <h3>Educação para Todos</h3>
+              <p>Oferece aulas gratuitas de alfabetização e reforço escolar para jovens e adultos.</p>
+              <a class="btn-outline" href="contato.html" lang="pt">Saiba mais</a>
+            </div>
+          </article>
 
-    <article class="project-card col-4" id="alimentos">
-      <span class="badge badge-alimentos">Alimentação</span>
-      <img src="../IMG/alimentos.png" alt="Distribuição de alimentos" loading="lazy">
-      <div class="card-body">
-        <h3>Alimente Esperanças</h3>
-        <p>Recolhe e distribui alimentos para famílias em situação de vulnerabilidade. </p>
-        <a class="btn-outline" href="contato.html" lang="pt">Saiba mais</a>
-      </div>
-    </article>
+          <article class="project-card col-4" id="alimentos" role="article">
+            <span class="badge badge-alimentos">Alimentação</span>
+            <img src="../IMG/alimentos.png" alt="Distribuição de alimentos" loading="lazy">
+            <div class="card-body">
+              <h3>Alimente Esperanças</h3>
+              <p>Recolhe e distribui alimentos para famílias em situação de vulnerabilidade. </p>
+              <a class="btn-outline" href="contato.html" lang="pt">Saiba mais</a>
+            </div>
+          </article>
 
-    <article class="project-card col-4" id="digital">
-      <span class="badge badge-digital">Inclusão Digital</span>
-      <img src="../IMG/internet.png" alt="Inclusão digital em comunidades carentes" loading="lazy">
-      <div class="card-body">
-        <h3>Conecte Solidariedade</h3>
-        <p>Fornece acesso à internet e oficinas de informática em comunidades.</p>
-        <a class="btn-outline" href="contato.html" lang="pt">Saiba mais</a>
-      </div>
-    </article>
+          <article class="project-card col-4" id="digital" role="article">
+            <span class="badge badge-digital">Inclusão Digital</span>
+            <img src="../IMG/internet.png" alt="Inclusão digital em comunidades carentes" loading="lazy">
+            <div class="card-body">
+              <h3>Conecte Solidariedade</h3>
+              <p>Fornece acesso à internet e oficinas de informática em comunidades.</p>
+              <a class="btn-outline" href="contato.html" lang="pt">Saiba mais</a>
+            </div>
+          </article>
 
-    <article class="project-card col-4" id="saude">
-      <span class="badge badge-saude">Saúde</span>
-      <img src="../IMG/saude.png" alt="Mutirão de saúde com exames básicos" loading="lazy">
-      <div class="card-body">
-        <h3>Saúde e Bem-Estar Comunitário</h3>
-        <p>Consultas básicas, exames preventivos e ações de saúde em comunidades carentes.</p>
-        <a class="btn-outline" href="contato.html" lang="pt">Saiba mais</a>
-      </div>
-    </article>
+          <article class="project-card col-4" id="saude" role="article">
+            <span class="badge badge-saude">Saúde</span>
+            <img src="../IMG/saude.png" alt="Mutirão de saúde com exames básicos" loading="lazy">
+            <div class="card-body">
+              <h3>Saúde e Bem-Estar Comunitário</h3>
+              <p>Consultas básicas, exames preventivos e ações de saúde em comunidades carentes.</p>
+              <a class="btn-outline" href="contato.html" lang="pt">Saiba mais</a>
+            </div>
+          </article>
 
-    <article class="project-card col-4" id="digital2">
-      <span class="badge badge-digital">Capacitação</span>
-      <img src="../IMG/capacitacao.png" alt="Workshop profissional para jovens" loading="lazy">
-      <div class="card-body">
-        <h3>Capacitação Profissional Jovem</h3>
-        <p>Cursos de informática básica, empreendedorismo e preparação para o mercado.</p>
-        <a class="btn-outline" href="contato.html" lang="pt">Saiba mais</a>
-      </div>
-    </article>
+          <article class="project-card col-4" id="digital2" role="article">
+            <span class="badge badge-digital">Capacitação</span>
+            <img src="../IMG/capacitacao.png" alt="Workshop profissional para jovens" loading="lazy">
+            <div class="card-body">
+              <h3>Capacitação Profissional Jovem</h3>
+              <p>Cursos de informática básica, empreendedorismo e preparação para o mercado.</p>
+              <a class="btn-outline" href="contato.html" lang="pt">Saiba mais</a>
+            </div>
+          </article>
 
-    <article class="project-card col-4" id="alimentos2">
-      <span class="badge badge-alimentos">Alimentação</span>
-      <img src="../IMG/horta.png" alt="Moradores cuidando de horta comunitária" loading="lazy">
-      <div class="card-body">
-        <h3>Horta Comunitária Sustentável</h3>
-        <p>Criação de hortas para promover alimentação saudável e educação ambiental.</p>
-        <a class="btn-outline" href="contato.html" lang="pt">Saiba mais</a>
-      </div>
-    </article>
+          <article class="project-card col-4" id="alimentos2" role="article">
+            <span class="badge badge-alimentos">Alimentação</span>
+            <img src="../IMG/horta.png" alt="Moradores cuidando de horta comunitária" loading="lazy">
+            <div class="card-body">
+              <h3>Horta Comunitária Sustentável</h3>
+              <p>Criação de hortas para promover alimentação saudável e educação ambiental.</p>
+              <a class="btn-outline" href="contato.html" lang="pt">Saiba mais</a>
+            </div>
+          </article>
 
-  </div>
-</section>
+        </div>
+    </section>
   </main>
 
   <footer class="site-footer">

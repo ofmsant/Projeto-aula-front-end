@@ -783,7 +783,7 @@ select.invalid:focus {
     background: #126367e7;
     transform: scale(1.05);
 }
-/* --- Estilos para o Card de Voluntário --- */
+
 /* Garante que o card comporte elementos flutuantes, como o botão de excluir */
 .voluntario-card {
     /* Mantém estilos de card existentes */
@@ -974,4 +974,308 @@ select.invalid:focus {
 .badge-saude {
     background: var(--muted); /* #6b7280 */
     color: var(--card); /* Texto Branco */
+}
+
+/* Botão lateral do Alto Contraste */
+.btn-contrast-fixed {
+    position: fixed;
+    right: 15px;
+    bottom: 20px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #000;
+    color: #fff;
+    border: 2px solid #fff;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 9999;
+}
+.btn-contrast-fixed:hover {
+    background: #222;
+}
+
+
+/* Modo Alto Contraste */
+
+body.high-contrast {
+    /* Fundo preto puro e texto branco/amarelo */
+    background: #000 !important;
+    color: #FFF !important;
+}
+
+/* Cores de Destaque */
+body.high-contrast a,
+body.high-contrast .btn-contrast-fixed {
+    color: #FF0 !important; /* Amarelo para links e toggle */
+    text-decoration: underline !important;
+}
+body.high-contrast .btn-contrast-fixed {
+    background: #000 !important;
+    border-color: #FF0 !important;
+}
+
+/* Todos os Textos, Headers e Labels */
+body.high-contrast h1,
+body.high-contrast h2,
+body.high-contrast h3,
+body.high-contrast p,
+body.high-contrast span,
+body.high-contrast label,
+body.high-contrast strong {
+    color: #FFF !important; /* Texto principal em branco */
+}
+
+/* Blocos e Backgrounds (Vencendo gradientes) */
+/* Garante que o header (que tem gradiente), footer, cards e fieldsets fiquem pretos com borda branca */
+body.high-contrast .site-header,
+body.high-contrast footer,
+body.high-contrast .project-card,
+body.high-contrast .highlight,
+body.high-contrast .voluntario-card,
+body.high-contrast fieldset,
+body.high-contrast .alerta {
+    background: #000 !important;
+    color: #FFF !important;
+    border: 2px solid #FFF !important;
+    box-shadow: none !important;
+    background-image: none !important; /* Anula gradientes! */
+}
+body.high-contrast .alerta.sucesso {
+    background: #000 !important; 
+    border-color: #FF0 !important; 
+    color: #FFF !important;
+}
+
+
+/* Inputs e Textareas */
+body.high-contrast input,
+body.high-contrast select,
+body.high-contrast textarea {
+    background: #000 !important;
+    color: #FFF !important;
+    border: 2px solid #FFF !important;
+}
+
+/* Botões (Base e Contraste) */
+body.high-contrast .btn,
+body.high-contrast .btn-outline,
+body.high-contrast .btn-ghost,
+body.high-contrast .carousel-prev,
+body.high-contrast .carousel-next {
+    background: #000 !important;
+    color: #FFF !important;
+    border: 2px solid #FFF !important;
+    box-shadow: none !important;
+    background-image: none !important; /* Anula gradientes! */
+}
+
+/* Imagens (Importante para Acessibilidade) */
+body.high-contrast img:not(.logo):not(.logo-sm) {
+    /* Inverte cores e aumenta o contraste para acessibilidade */
+    filter: invert(1) contrast(1.2) !important;
+}
+
+/* Foco (Acessibilidade por teclado) */
+body.high-contrast a:focus,
+body.high-contrast button:focus,
+body.high-contrast input:focus,
+body.high-contrast textarea:focus,
+body.high-contrast select:focus {
+    outline: 3px solid #FF0 !important; /* Foco em Amarelo */
+    outline-offset: 3px;
+    box-shadow: none !important;
+}
+/* Sobrescreve as variáveis CSS no modo Alto Contraste */
+body.high-contrast:root {
+    --bg: #000 !important;
+    --card: #000 !important;
+    --brand: #FFF !important;
+    --accent: #FF0 !important;
+}
+
+/* Força os botões principais a usarem a cor pura, anulando o linear-gradient original */
+body.high-contrast .btn {
+    background: #000 !important; /* Cor de fundo pura */
+    color: #FF0 !important;     /* Cor do texto em amarelo */
+    border: 2px solid #FF0 !important; /* Borda em amarelo */
+    box-shadow: none !important;
+    background-image: none !important; /* ANULA O GRADIENTE ORIGINAL */
+}
+
+/* Garante que o hover seja sutil */
+body.high-contrast .btn:hover {
+    background: #111 !important; 
+    transform: none !important;
+}
+
+:focus {
+  outline: 3px solid hsl(0, 0%, 100%);
+  outline-offset: 4px;
+}
+
+/* Modo Escuro */
+body.dark {
+  background: #121212;
+  color: #eee;
+}
+
+body.dark .card,
+body.dark .project-card,
+body.dark .highlight,
+body.dark header,
+body.dark footer {
+  background: #1e1e1e;
+  color: #eee;
+}
+
+.btn-dark-fixed {
+  position: fixed;
+  right: 20px;
+  bottom: 80px;
+  background: #222;
+  color: #fff;
+  border: none;
+  padding: 12px 14px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 2000;
+}
+
+body.dark {
+  background: #121212;
+  color: #e5e5e5;
+}
+
+body.dark header,
+body.dark footer,
+body.dark .card,
+body.dark .project-card,
+body.dark .highlight {
+  background: #1e1e1e !important;
+  color: #e5e5e5 !important;
+}
+
+body.dark a {
+  color: #90caf9;
+}
+
+/* Gaveta lateral de acessibilidade */
+
+.accessibility-drawer {
+  position: fixed;
+  right: -80px;
+  top: 40%;
+  width: 80px;
+  background: #111;
+  padding: 8px;
+  border-radius: 12px 0 0 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+  transition: right 0.35s ease;
+  z-index: 999999;
+}
+
+.accessibility-drawer.open {
+  right: 0;               /* aparece */
+}
+
+/* Setinha */
+.drawer-toggle {
+  position: absolute;
+  left: -26px;
+  top: 40%;
+  width: 26px;
+  height: 54px;
+  border-radius: 8px 0 0 8px;
+  background: #111;
+  color: #fff;
+  border: 2px solid #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 16px;
+}
+
+.accessibility-drawer.open .drawer-toggle {
+  transform: rotate(180deg);
+}
+
+.drawer-toggle:hover {
+  background: #222;
+}
+
+/* Botões da gaveta */
+.drawer-content {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.drawer-btn {
+  width: 100%;
+  background: #000;
+  border: 2px solid #fff;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.drawer-btn:hover {
+  background: #333;
+}
+
+/* Acessibilidade – Foco Visível (WCAG 2.1 AA) */
+:focus-visible {
+  outline: 3px solid #1a73e8;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Para elementos dentro do drawer */
+.drawer-btn:focus-visible,
+.drawer-toggle:focus-visible {
+  outline: 3px solid #ffbf00;
+  outline-offset: 3px;
+}
+
+/* Para links do menu */
+.main-nav a:focus-visible {
+  outline: 3px solid #1a73e8;
+  outline-offset: 4px;
+}
+
+/* Para inputs e selects */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #1a73e8;
+  outline-offset: 3px;
+  background-color: var(--bg-focus, #fff);
+}
+
+/* Foco acessível – Modo Escuro */
+body.dark :focus-visible {
+  outline: 3px solid #ffd966; /* amarelo claro */
+  outline-offset: 3px;
+}
+
+/* Foco acessível – Alto Contraste */
+body.high-contrast :focus-visible {
+  outline: 4px solid #fff !important;  /* foco branco */
+  outline-offset: 4px;
+  background: black !important;
+  color: yellow !important;
+}
+
+/* Foco quando dark + high-contrast estão juntos */
+body.dark.high-contrast :focus-visible {
+  outline: 4px solid #ff0 !important; /* amarelo puro */
+  outline-offset: 4px;
 }
